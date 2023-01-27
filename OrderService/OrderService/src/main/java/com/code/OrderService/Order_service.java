@@ -1,4 +1,4 @@
-package com.ajcode.OrderService;
+package com.code.OrderService;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
