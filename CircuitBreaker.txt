@@ -1,0 +1,14 @@
+CircuitBreaker:
+
+UserService: Display Orders for user
+
+OrderService: InsertOrder and show inserted orders
+
+
+
+UserService---> State(Closed) -----> OrderService (UP)
+
+UserService-5 calls--- 3 failed-> State(Open) -----> OrderService (Down)
+
+UserService--timeout 5s-> State(HalfOpen) ---failed--> State(Open) --->  OrderService (Down)
+                                ---orderservice up---> Sucesse

@@ -9,11 +9,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name = "ORDERS_TBL")
+
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
+@Table(name = "ORDERS")
 public class Order_service {
 
     @Id
@@ -30,10 +32,8 @@ public class Order_service {
         this.color = color;
         this.price = price;
     }
-    public Order_service() {
-    	
-    }
-	@Override
+
+    @Override
 	public String toString() {
 		return "Order [id=" + id + ", name=" + name + ", category=" + category + ", color=" + color + ", price=" + price
 				+ "]";
